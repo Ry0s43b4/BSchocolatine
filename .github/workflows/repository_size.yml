@@ -1,0 +1,13 @@
+name: Repository size
+
+on: [push]
+
+jobs:
+    Repository_size:
+        name: "Repository size"
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout
+            - run: |
+                echo $(GITHUB_REF_NAME)
+                du -skh --exclude=".git"
