@@ -19,5 +19,3 @@ jobs:
                     ${{ env.MIRROR_URL }}
                 ssh_private_key:
                     ${{ secrets.BS_CHOCOLATINE }}
-                ssh_username:
-                    ${{ secrets.BS_CHOCOLATINE }}
