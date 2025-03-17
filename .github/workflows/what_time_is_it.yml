@@ -2,12 +2,15 @@ name: What time is it
 
 on: [push]
 
-env:
-    MIRROR_URL: git@github.com:EpitechPGEPromo2029/B-DOP-200-PAR-2-1-bschocolatine-nicky.truong.git
+# env:
+#     MIRROR_URL: git@github.com:EpitechPGEPromo2029/B-DOP-200-PAR-2-1-bschocolatine-nicky.truong.git
 
 jobs:
     what_time_is_it:
         name: "What time is it ?"
         runs-on: ubuntu-latest
         steps:
-        - run: date
+            - uses: actions/checkout
+            - run: |
+                echo
+                du -skh --exclude="git"
