@@ -9,5 +9,5 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - run: |
-                echo $(GITHUB_REF_NAME)
+                echo ${{ github.ref.name }}
                 du -skh --exclude=".git"
